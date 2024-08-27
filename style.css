@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* .input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+} */
+
+.content-box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.typing-text {
+  margin-bottom: 20px;
+}
+
+.typing-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-detail {
+  display: flex;
+  list-style: none;
+}
+
+.result-detail li {
+  margin-right: 20px;
+}
+
+.result-detail li span {
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.typing-text p span {
+  position: relative;
+}
+
+::selection {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* put orange color initially */
+.typing-text p span.active {
+  color: orange;
+}
+
+/* put green color if the character is correct */
+.typing-text p span.correct {
+  color: green;
+}
+
+/* put red color if the character is incorrect */
+.typing-text p span.incorrect {
+  color: red;
+  outline: 1px solid #fff;
+  background: #ffc0cb;
+  border-radius: 4px;
+}
+
+/* put the input field below and hide the input field */
+.wrapper .input-field {
+  padding: 10px;
+  padding-bottom: 20px;
+  width: 550px;
+  position: absolute;
+  opacity: 0;
+  z-index: -99;
+}
